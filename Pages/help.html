@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>help</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.css"/>
+        <link rel="stylesheet" href="../css/all.css"/>
+		<link rel="stylesheet" href="../css/w3.css"/>
+        <link rel="icon" href="image/favicon.png" sizes="16x16" type="image/png">
+        <script src="../js/jQuery.js"></script>
+        <script src="../js/bootstrap.js"></script>
+
+    </head>
+    <body>
+        <h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="../calander/feb.png" style="width:50%">
+					<img class="mySlides" src="../calander/mar.png" style="width:50%">
+					<img class="mySlides" src="../calander/apr.png" style="width:50%">
+					<img class="mySlides" src="../calander/may.png" style="width:50%">
+					<img class="mySlides" src="../calander/jun.png" style="width:50%">
+					<img class="mySlides" src="../calander/jul.png" style="width:50%">
+					<img class="mySlides" src="../calander/aug.png" style="width:50%">
+					<img class="mySlides" src="../calander/sep.png" style="width:50%">
+					<img class="mySlides" src="../calander/oct.png" style="width:50%">
+					<img class="mySlides" src="../calander/nov.png" style="width:50%">
+					<img class="mySlides" src="../calander/dec.png" style="width:50%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </body>
+</html>
