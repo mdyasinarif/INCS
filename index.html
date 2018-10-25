@@ -21,13 +21,36 @@ and open the template in the editor.
         <div class="container-fluid">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="hedline col-lg-4 col-md-6 col-sm-6 col-xl-6">
+                    <div class="hedline col-lg-5 col-md-5 col-sm-5 col-xl-5">
                         <h1>ইমামিয়া চিশতীয়া নেজামীয়া সংঘ</h1>
-                    </div>
-                    <div class="hedline col-lg-8 col-md-6 col-sm-6 col-xl-6">
+					</div>
+					
+                    <div class="hedline col-lg-6 col-md-6 col-sm-6 col-xl-6">
                         <marquee><h2>“সামনে সুন্দর সময় আসছে মানুষ সত্য খুজবে, সত্য গ্রহন করবে প্থিবীতে শান্তি আসবে”-সূফী সদর উদ্দিন আহমদ চিশতী</h2></marquee>
                     </div>
-
+					<div class="hedline col-lg-1 col-md-1 col-sm-1 col-xl-1">
+                        <span id ="hour"></span>:
+						<span id ="minute"></span>:
+						<span id ="second"></span>
+						<script>
+				function clock(){
+				var date = new Date();
+				
+				var hour = date.getHours();
+				var minute = date.getMinutes();
+				var second = date.getSeconds();
+				
+				document.getElementById("hour").innerHTML = hour;
+				document.getElementById("minute").innerHTML = minute;
+				document.getElementById("second").innerHTML =second;
+				}
+				
+				setInterval(clock, 1000);
+				
+				</script>
+				
+					</div>
+				</div>
                 </div>
             </div>
             <nav class="navbar navbar-expand-sm  bg-success navbar-success">
